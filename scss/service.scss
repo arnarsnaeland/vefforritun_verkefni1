@@ -14,13 +14,27 @@
     margin-left: $gutter;
   }
 
+  h4 {
+    font-size: 1.125rem;
+    font-family: 'Roboto Slab', serif;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+
+    list-style: none;
+
   }
 
+  li:before {
+
+    height: 1.125rem;
+    content: ' ';
+    background-image: url(check.svg);
+  }
 
 
 
