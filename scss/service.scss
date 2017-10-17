@@ -1,26 +1,63 @@
 .service {
 
-  margin: 2 * $gutter;
+  margin: 8 * $gutter 1 * $gutter;
 
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 700px) {
+    flex-direction: column;
+    margin: 3 * $gutter $gutter;
+  }
+
+
   &__image {
     max-width: 49.167%;
+
+    @media (max-width: 700px) {
+      max-width: 100%;
+    }
+
   }
 
   &__list {
+
     max-width: 49.167%;
     margin-left: $gutter;
-  }
-
-  ul {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+    @media (max-width: 700px) {
+      max-width: 100%;
+      margin-bottom: 3 * $gutter;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-family: 'Roboto Slab', serif;
+
+
+      background-image: url(check.svg);
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: 50% 50%;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    li {
+      list-style: none;
+
+
+      @media (max-width: 700px) {
+        margin-bottom: $gutter;
+      }
+    }
 
   }
-
 
 
 

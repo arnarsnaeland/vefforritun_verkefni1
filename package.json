@@ -1,0 +1,29 @@
+{
+  "name": "vefforitun_stort1",
+  "version": "1.0.0",
+  "description": "Stort verkefni vefforitun",
+  "main": "index.html",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html styles.scss",
+    "sass": "node-sass styles.scss styles.css -w",
+    "dev": "npm-run-all --parallel sass browser-sync",
+    "lint": "stylelint styles.scss --syntax scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnarsnaeland/vefforritun_verkefni1.git"
+  },
+  "author": "Arnar Snæland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnarsnaeland/vefforritun_verkefni1/issues"
+  },
+  "homepage": "https://github.com/arnarsnaeland/vefforritun_verkefni1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-primer": "^2.1.0"
+  }
+}
