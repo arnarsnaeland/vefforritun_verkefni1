@@ -1,1 +1,1 @@
-"# vefforritun_verkefni1" 
+# vefforritun_verkefni1
