@@ -1,35 +1,31 @@
 .banner {
 
-      background: transparent url(bg-subpage.jpg) no-repeat scroll;
-      height: 50vh;
-      background-size: cover;
-      background-position: 50% 50%;
+  display: flex;
+  height: 50vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent url("bg-subpage.jpg") no-repeat scroll;
+  background-position: 50% 50%;
+  background-size: cover;
+  align-items: center;
 
-      font-size: 1.5rem;
-      font-family: 'Roboto Slab', serif;
+  h1 {
+    margin-left: 2 * $gutter;
 
-      display: flex;
-      align-items: center;
-
-      color: #ffffff;
-
-      h1 {
-        margin-left: 2 * $gutter;
-
-        @media (max-width: 500px) {
-          word-break: break-all;
-        }
-      }
+    @media (max-width: 500px) {
+      word-break: break-all;
+    }
+  }
 }
 
-.about-fooservice{
+.about-fooservice {
 
   margin: 4 * $gutter 2 * $gutter;
 
   h3 {
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
   }
-
 
   p {
     margin: $gutter 0;
@@ -45,25 +41,24 @@
   }
 
   blockquote {
-    margin: 2 * $gutter;
-
-    max-width: 49%;
     float: right;
-    font-style: italic;
+    max-width: 49%;
+    margin: 2 * $gutter;
     font-size: 1.5rem;
+    font-style: italic;
 
     @media (max-width: 500px) {
-      margin: $gutter;
       float: none;
       max-width: 100%;
+      margin: $gutter;
     }
 
   }
 
   footer {
     margin-top: $gutter;
-    font-style: normal;
     font-size: 0.875rem;
+    font-style: normal;
 
   }
 

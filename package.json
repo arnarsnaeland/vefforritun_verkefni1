@@ -7,7 +7,7 @@
     "browser-sync": "browser-sync start --server --files index.html styles.scss",
     "sass": "node-sass styles.scss styles.css -w",
     "dev": "npm-run-all --parallel sass browser-sync",
-    "lint": "stylelint styles.scss --syntax scss"
+    "lint": "stylelint *.scss scss/*.scss --syntax scss"
   },
   "repository": {
     "type": "git",
