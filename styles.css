@@ -15,7 +15,7 @@ html {
   /* stylelint-disable-line */
   margin-right: 20px;
   margin-left: 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5; }
   @media (min-width: 1200px) {
@@ -235,8 +235,8 @@ main {
     text-align: center; }
 
 .buy-service {
-  margin: 160px 40px 100px 40px;
   display: flex;
+  margin: 160px 40px 100px 40px;
   justify-content: center;
   align-items: center;
   flex-direction: column; }
@@ -247,14 +247,14 @@ main {
     .buy-service {
       margin-top: 100px; } }
   .buy-service__text {
+    font-family: "Roboto Slab", serif;
     font-size: 1.3125rem;
-    font-weight: bolder;
-    font-family: 'Roboto Slab', serif; }
+    font-weight: bolder; }
   .buy-service button {
     margin-top: 10px;
+    padding: 10px 60px;
     font-size: 2rem;
     color: #dedede;
-    padding: 10px 60px;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
@@ -316,7 +316,15 @@ main {
     float: right;
     font-style: italic;
     font-size: 1.5rem; }
-<<<<<<< HEAD
+    @media (max-width: 500px) {
+      .about-fooservice blockquote {
+        margin: 20px;
+        float: none;
+        max-width: 100%; } }
+  .about-fooservice footer {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 0.875rem; }
 
 .information {
   display: flex;
@@ -445,18 +453,3 @@ main {
 .form__dropdown__payment:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #bebebe; }
-
-select > option {
-  outline: none;
-  box-shadow: 0 0 2px 2px #bebebe; }
-=======
-    @media (max-width: 500px) {
-      .about-fooservice blockquote {
-        margin: 20px;
-        float: none;
-        max-width: 100%; } }
-  .about-fooservice footer {
-    margin-top: 20px;
-    font-style: normal;
-    font-size: 0.875rem; }
->>>>>>> 9a0f6d1e8555dc071e2507942988b5404ffadcb3
