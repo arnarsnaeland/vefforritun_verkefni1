@@ -39,6 +39,12 @@ main {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed; }
+  @media (max-width: 1200px) {
+    .menubar {
+      width: 100%; } }
+  @media (max-width: 500px) {
+    .menubar {
+      margin-right: 20px; } }
   .menubar__name {
     margin: 10px 10px 10px 40px;
     font-family: 'Roboto Slab', serif;
@@ -62,6 +68,9 @@ main {
     background: #666;
     border: 1px solid #666;
     border-radius: 4px; }
+    @media (max-width: 500px) {
+      .menubar .button {
+        display: none; } }
   .menubar .button:hover {
     color: #eee;
     background-color: #333;
@@ -75,7 +84,7 @@ main {
   width: 100%;
   height: 100vh;
   background: transparent url(bg.jpg) no-repeat fixed 50% 50%;
-  background-size: cover;
+  background-size: 81%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -89,14 +98,14 @@ main {
     align-items: center;
     margin-bottom: 20px; }
   .heading__text h3 {
-    margin-bottom: 20px;
     font-size: 2rem;
     opacity: 0;
     animation-name: texti;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-delay: 1s;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    font-weight: 400; }
   .heading__text h1 {
     margin-bottom: 20px;
     font-size: 4rem;
@@ -133,25 +142,67 @@ main {
     opacity: 1; } }
 
 .service {
-  margin: 40px;
+  margin: 160px 20px;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 700px) {
+    .service {
+      flex-direction: column;
+      margin: 60px 20px; } }
   .service__image {
     max-width: 49.167%; }
+    @media (max-width: 700px) {
+      .service__image {
+        max-width: 100%; } }
   .service__list {
     max-width: 49.167%;
-    margin-left: 20px; }
-  .service ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
+    margin-left: 20px;
+    display: flex; }
+    @media (max-width: 700px) {
+      .service__list {
+        max-width: 100%;
+        margin-bottom: 60px; } }
+    .service__list h4 {
+      font-size: 1.125rem;
+      font-family: 'Roboto Slab', serif;
+      background-image: url(check.svg);
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position: 50% 50%; }
+    .service__list ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+    .service__list li {
+      list-style: none; }
+      @media (max-width: 700px) {
+        .service__list li {
+          margin-bottom: 20px; } }
 
 .review {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 40px; }
+  @media (max-width: 700px) {
+    .review {
+      justify-content: space-around;
+      margin: 0 20px; } }
+  @media (max-width: 500px) {
+    .review {
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0 20px; } }
   .review__person {
     max-width: 32%; }
+    @media (max-width: 700px) {
+      .review__person {
+        max-width: 49%;
+        margin-bottom: 40px; } }
+    @media (max-width: 500px) {
+      .review__person {
+        max-width: 100%;
+        margin-bottom: 60px; } }
   .review__image {
     display: flex;
     align-items: center;
@@ -169,6 +220,12 @@ main {
     font-style: italic;
     font-size: 1.3125rem;
     font-weight: 600; }
+    @media (max-width: 700px) {
+      .review__quote {
+        height: auto; } }
+    @media (max-width: 500px) {
+      .review__quote {
+        height: auto; } }
   .review__name {
     font-weight: 600;
     text-align: center; }
@@ -183,12 +240,16 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  @media (max-width: 700px) {
+    .buy-service {
+      margin-top: 100px; } }
+  @media (max-width: 500px) {
+    .buy-service {
+      margin-top: 100px; } }
   .buy-service__text {
     font-size: 1.3125rem;
     font-weight: bolder;
     font-family: 'Roboto Slab', serif; }
-  .buy-service__button {
-    width: 21%; }
   .buy-service button {
     margin-top: 10px;
     font-size: 2rem;
@@ -223,9 +284,10 @@ main {
     border-top: 1px solid #ffffff; }
 
 .banner {
-  background: transparent url(bg-subpage.jpg) no-repeat fixed 50% 50%;
-  height: 400px;
+  background: transparent url(bg-subpage.jpg) no-repeat scroll;
+  height: 50vh;
   background-size: cover;
+  background-position: 50% 50%;
   font-size: 1.5rem;
   font-family: 'Roboto Slab', serif;
   display: flex;
@@ -233,6 +295,9 @@ main {
   color: #ffffff; }
   .banner h1 {
     margin-left: 40px; }
+    @media (max-width: 500px) {
+      .banner h1 {
+        word-break: break-all; } }
 
 .about-fooservice {
   margin: 80px 40px; }
@@ -242,141 +307,21 @@ main {
     margin: 20px 0; }
   .about-fooservice :nth-child(5) {
     max-width: 41.2%; }
+    @media (max-width: 700px) {
+      .about-fooservice :nth-child(5) {
+        max-width: 100%; } }
   .about-fooservice blockquote {
-    margin-top: 20px;
-    max-width: 47.5%;
+    margin: 40px;
+    max-width: 49%;
     float: right;
     font-style: italic;
     font-size: 1.5rem; }
-
-.information {
-  display: flex;
-  max-width: 100%;
-  font-weight: bold;
-  flex-direction: column; }
-  @media (min-width: 600px) {
-    .information {
-      flex-direction: row;
-      justify-content: space-around; } }
-  .information__headline {
-    font-family: "Roboto Slab", serif;
-    font-size: 24px; }
-
-.personal {
-  display: flex;
-  max-width: 400px;
-  margin: 20px;
-  flex-direction: column;
-  flex-grow: 1; }
-  .personal__form {
-    display: flex;
-    flex-direction: column; }
-  .personal__radioUL {
-    list-style-type: none; }
-    .personal__radioUL .personal__radioL {
-      margin-top: 20px; }
-
-.form__radioButton {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  top: 4px;
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-  border: 2px solid #bebebe;
-  border-radius: 50%;
-  outline: none; }
-  .form__radioButton:checked {
-    border: 6px solid #808080; }
-  .form__radioButton:focus {
-    box-shadow: 0 0 3px 4px #bebebe; }
-
-.label {
-  margin-top: 20px; }
-
-.form__text {
-  padding: 3px;
-  border: solid 1px #808080;
-  border-radius: 3px; }
-  .form__text:focus {
-    outline: none;
-    box-shadow: 0 0 2px 2px #bebebe; }
-
-.payment {
-  display: flex;
-  max-width: 400px;
-  margin: 20px;
-  flex-direction: column;
-  flex-grow: 1; }
-  .payment__form {
-    display: flex;
-    flex-direction: column; }
-
-.form__check {
-  margin-top: 20px; }
-
-.form__checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  margin-right: 5px;
-  vertical-align: middle;
-  border: 2px solid #808080;
-  border-radius: 10%;
-  outline: none; }
-  .form__checkbox:checked {
-    background-color: #808080; }
-  .form__checkbox:checked::after {
-    position: relative;
-    top: -6px;
-    font-size: 9px;
-    color: #fff;
-    content: "\2714"; }
-  .form__checkbox:focus {
-    box-shadow: 0 0 3px 4px #bebebe; }
-
-.order-service {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-  .order-service button {
-    padding: 10px 100px;
-    margin-top: 10px;
-    margin-bottom: 80px;
-    font-size: 1rem;
-    color: #dedede;
-    cursor: pointer;
-    background: #666;
-    border: 1px solid #666;
-    border-radius: 4px; }
-  .order-service button:hover {
-    background-color: #333;
-    transition-timing-function: ease;
-    transition-duration: 500ms; }
-
-.form__date {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .form__date__input {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    width: 100%; }
-  .form__date__dropdown {
-    width: 33%; }
-    .form__date__dropdown:focus {
-      outline: none;
-      box-shadow: 0 0 2px 2px #bebebe; }
-
-.form__dropdown__payment:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #bebebe; }
-
-select > option {
-  outline: none;
-  box-shadow: 0 0 2px 2px #bebebe; }
+    @media (max-width: 500px) {
+      .about-fooservice blockquote {
+        margin: 20px;
+        float: none;
+        max-width: 100%; } }
+  .about-fooservice footer {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 0.875rem; }
