@@ -8,6 +8,16 @@
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
 
+  @media (max-width: $max-width) {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    margin-right: $gutter;
+  }
+
+
+
   &__name {
     margin: $gutter / 2 $gutter / 2 $gutter / 2 $gutter * 2;
     font-family: 'Roboto Slab', serif;
@@ -40,6 +50,10 @@
     background: #666;
     border: 1px solid #666;
     border-radius: 4px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 
   .button:hover {

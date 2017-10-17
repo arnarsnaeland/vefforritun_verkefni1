@@ -15,6 +15,10 @@
 
       h1 {
         margin-left: 2 * $gutter;
+
+        @media (max-width: 500px) {
+          word-break: break-all;
+        }
       }
 }
 
@@ -33,15 +37,27 @@
 
   :nth-child(5) {
     max-width: 41.2%;
+
+    @media (max-width: 700px) {
+      max-width: 100%;
+    }
+
   }
 
   blockquote {
-    margin-top: 2 * $gutter;
+    margin: 2 * $gutter;
 
     max-width: 49%;
     float: right;
     font-style: italic;
     font-size: 1.5rem;
+
+    @media (max-width: 500px) {
+      margin: $gutter;
+      float: none;
+      max-width: 100%;
+    }
+
   }
 
   footer {
