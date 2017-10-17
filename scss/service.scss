@@ -1,15 +1,12 @@
 .service {
-
-  margin: 8 * $gutter 1 * $gutter;
-
   display: flex;
+  margin: 8 * $gutter $gutter;
   justify-content: space-between;
 
   @media (max-width: 700px) {
-    flex-direction: column;
     margin: 3 * $gutter $gutter;
+    flex-direction: column;
   }
-
 
   &__image {
     max-width: 49.167%;
@@ -22,9 +19,9 @@
 
   &__list {
 
+    display: flex;
     max-width: 49.167%;
     margin-left: $gutter;
-    display: flex;
 
     @media (max-width: 700px) {
       max-width: 100%;
@@ -32,14 +29,13 @@
     }
 
     h4 {
+      font-family: "Roboto Slab", serif;
       font-size: 1.125rem;
-      font-family: 'Roboto Slab', serif;
 
-
-      background-image: url(check.svg);
+      background-image: url("check.svg");
       background-repeat: no-repeat;
-      background-size: 1.5rem;
       background-position: 50% 50%;
+      background-size: 1.5rem;
     }
 
     ul {
@@ -51,14 +47,10 @@
     li {
       list-style: none;
 
-
       @media (max-width: 700px) {
         margin-bottom: $gutter;
       }
     }
 
   }
-
-
-
 }
