@@ -35,18 +35,16 @@ main {
 .menubar {
   position: fixed;
   display: flex;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7); }
   @media (max-width: 1200px) {
     .menubar {
-      width: 100%; } }
-  @media (max-width: 500px) {
-    .menubar {
-      margin-right: 20px; } }
+      width: calc(100% - 40px); } }
   .menubar__name {
-    margin: 10px 10px 10px 40px;
+    margin: 10px 10px 10px 20px;
     font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -61,14 +59,14 @@ main {
   .menubar .menu-button {
     display: flex;
     padding: 5px 10px;
-    margin: 10px 40px 10px 10px;
+    margin: 10px 20px 10px 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
     border-radius: 4px; }
-    @media (max-width: 500px) {
+    @media (max-width: 400px) {
       .menubar .menu-button {
         display: none; } }
   .menubar .menu-button:hover {
@@ -87,7 +85,7 @@ main {
   margin-bottom: 40px;
   flex-direction: column;
   background: transparent url("bg.jpg") no-repeat fixed 50% 50%;
-  background-size: 81%;
+  background-size: 1200px;
   justify-content: center;
   align-items: center; }
   .heading__text {
@@ -115,11 +113,13 @@ main {
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
       animation-delay: 2s; }
-  .heading__buy-button {
-    padding: 10px;
-    margin: 10px;
-    font-size: 2rem;
-    color: #dedede;
+  .heading__button {
+    display: flex;
+    width: 100px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
@@ -130,10 +130,17 @@ main {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-delay: 3s; }
-  .heading__buy-button:hover {
+    @media (max-width: 400px) {
+      .heading__button {
+        display: none; } }
+  .heading__button:hover {
+    color: #eee;
     background-color: #333;
     transition-timing-function: ease;
     transition-duration: 500ms; }
+  .heading__link {
+    color: #fff;
+    text-decoration: none; }
 
 @keyframes texti {
   0% {
@@ -163,16 +170,16 @@ main {
         max-width: 100%;
         margin-bottom: 60px; } }
     .service__list__heading4 {
-      padding-left: 1.7rem;
       padding-right: 0.5rem;
+      padding-left: 1.7rem;
       font-family: "Roboto Slab", serif;
       font-size: 1.125rem;
       background-image: url("check.svg");
       background-repeat: no-repeat;
       background-size: 1.5rem; }
     .service__list__p {
-      padding-left: 1.7rem;
-      padding-right: 0.5rem; }
+      padding-right: 0.5rem;
+      padding-left: 1.7rem; }
     .service__list__unordered-list {
       display: flex;
       flex-direction: column;
@@ -254,19 +261,26 @@ main {
     font-family: "Roboto Slab", serif;
     font-size: 1.3125rem;
     font-weight: bolder; }
-  .buy-service__buy-button {
-    padding: 10px 60px;
-    margin-top: 10px;
-    font-size: 2rem;
-    color: #dedede;
+  .buy-service__button {
+    display: flex;
+    width: 220px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.25rem;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
     border-radius: 4px; }
-  .buy-service__buy-button:hover {
+  .buy-service__button:hover {
+    color: #eee;
     background-color: #333;
     transition-timing-function: ease;
     transition-duration: 500ms; }
+  .buy-service__link {
+    color: #fff;
+    text-decoration: none; }
 
 .footer {
   background-color: #323232; }
