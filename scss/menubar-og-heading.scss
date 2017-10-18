@@ -13,7 +13,7 @@
   }
 
   &__name {
-    margin: $gutter / 2 $gutter / 2 $gutter / 2 $gutter * 2;
+    margin: $gutter / 2 $gutter / 2 $gutter / 2 $gutter;
     font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -35,7 +35,7 @@
   .menu-button {
     display: flex;
     padding: $gutter / 4 $gutter / 2;
-    margin: $gutter / 2 $gutter * 2 $gutter / 2 $gutter / 2;
+    margin: $gutter / 2 $gutter $gutter / 2 $gutter / 2;
     justify-content: center;
     align-items: center;
 
@@ -43,6 +43,10 @@
     background: #666;
     border: 1px solid #666;
     border-radius: 4px;
+
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 
   .menu-button:hover {
