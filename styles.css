@@ -33,12 +33,12 @@ main {
   overflow-x: hidden; }
 
 .menubar {
-  width: 1200px;
+  position: fixed;
   display: flex;
+  width: 1200px;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed; }
+  background-color: rgba(0, 0, 0, 0.7); }
   @media (max-width: 1200px) {
     .menubar {
       width: 100%; } }
@@ -47,79 +47,79 @@ main {
       margin-right: 20px; } }
   .menubar__name {
     margin: 10px 10px 10px 40px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bolder;
+    font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
+    font-weight: bolder;
     color: #fff; }
   .menubar__other-sites {
     display: flex; }
   .menubar__um {
-    margin: 10px;
     display: flex;
+    margin: 10px;
     justify-content: center;
     align-items: center; }
-  .menubar .button {
-    margin: 10px 40px 10px 10px;
+  .menubar .menu-button {
     display: flex;
+    padding: 5px 10px;
+    margin: 10px 40px 10px 10px;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
     border-radius: 4px; }
     @media (max-width: 500px) {
-      .menubar .button {
+      .menubar .menu-button {
         display: none; } }
-  .menubar .button:hover {
+  .menubar .menu-button:hover {
     color: #eee;
     background-color: #333;
     transition-timing-function: ease;
     transition-duration: 500ms; }
-  .menubar a {
-    text-decoration: none;
-    color: #fff; }
+  .menubar__link {
+    color: #fff;
+    text-decoration: none; }
 
 .heading {
+  display: flex;
   width: 100%;
   height: 100vh;
-  background: transparent url(bg.jpg) no-repeat fixed 50% 50%;
-  background-size: 81%;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 40px;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px; }
+  background: transparent url("bg.jpg") no-repeat fixed 50% 50%;
+  background-size: 81%;
+  justify-content: center;
+  align-items: center; }
   .heading__text {
-    font-size: 2rem;
-    font-family: 'Roboto Slab', serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; }
-  .heading__text h3 {
-    font-size: 2rem;
-    opacity: 0;
-    animation-name: texti;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    font-weight: 400; }
-  .heading__text h1 {
     margin-bottom: 20px;
-    font-size: 4rem;
-    opacity: 0;
-    animation-name: texti;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-delay: 2s;
-    animation-fill-mode: forwards; }
-  .heading button {
+    font-family: "Roboto Slab", serif;
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center; }
+    .heading__text__heading3 {
+      font-size: 2rem;
+      font-weight: 400;
+      opacity: 0;
+      animation-name: texti;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      animation-delay: 1s; }
+    .heading__text__heading1 {
+      margin-bottom: 20px;
+      font-size: 4rem;
+      opacity: 0;
+      animation-name: texti;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      animation-delay: 2s; }
+  .heading__buy-button {
+    padding: 10px;
     margin: 10px;
     font-size: 2rem;
     color: #dedede;
-    padding: 10px;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
@@ -127,10 +127,10 @@ main {
     opacity: 0;
     animation-name: texti;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
     animation-timing-function: ease-in;
-    animation-delay: 3s;
-    animation-fill-mode: forwards; }
-  .heading button:hover {
+    animation-delay: 3s; }
+  .heading__buy-button:hover {
     background-color: #333;
     transition-timing-function: ease;
     transition-duration: 500ms; }
@@ -142,34 +142,38 @@ main {
     opacity: 1; } }
 
 .service {
-  margin: 160px 20px;
   display: flex;
+  margin: 160px 20px;
   justify-content: space-between; }
   @media (max-width: 700px) {
     .service {
-      flex-direction: column;
-      margin: 60px 20px; } }
+      margin: 60px 20px;
+      flex-direction: column; } }
   .service__image {
     max-width: 49.167%; }
     @media (max-width: 700px) {
       .service__image {
         max-width: 100%; } }
   .service__list {
-    max-width: 49.167%;
-    margin-left: 20px;
-    display: flex; }
+    display: flex;
+    max-width: 47%;
+    margin-left: 20px; }
     @media (max-width: 700px) {
       .service__list {
         max-width: 100%;
         margin-bottom: 60px; } }
-    .service__list h4 {
+    .service__list__heading4 {
+      padding-left: 1.7rem;
+      padding-right: 0.5rem;
+      font-family: "Roboto Slab", serif;
       font-size: 1.125rem;
-      font-family: 'Roboto Slab', serif;
-      background-image: url(check.svg);
+      background-image: url("check.svg");
       background-repeat: no-repeat;
-      background-size: 1.5rem;
-      background-position: 50% 50%; }
-    .service__list ul {
+      background-size: 1.5rem; }
+    .service__list__p {
+      padding-left: 1.7rem;
+      padding-right: 0.5rem; }
+    .service__list__unordered-list {
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
@@ -181,18 +185,18 @@ main {
 
 .review {
   display: flex;
+  margin: 0 40px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 40px; }
+  justify-content: space-between; }
   @media (max-width: 700px) {
     .review {
       justify-content: space-around;
       margin: 0 20px; } }
   @media (max-width: 500px) {
     .review {
+      margin: 0 20px;
       flex-direction: column;
-      justify-content: space-around;
-      margin: 0 20px; } }
+      justify-content: space-around; } }
   .review__person {
     max-width: 32%; }
     @media (max-width: 700px) {
@@ -211,15 +215,15 @@ main {
     max-width: 80%;
     border-radius: 100%; }
   .review__quote {
-    margin-bottom: 10px;
-    height: 3.9rem;
     display: flex;
+    height: 3.9rem;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-style: italic;
     font-size: 1.3125rem;
-    font-weight: 600; }
+    font-style: italic;
+    font-weight: 600;
+    text-align: center; }
     @media (max-width: 700px) {
       .review__quote {
         height: auto; } }
@@ -250,16 +254,16 @@ main {
     font-family: "Roboto Slab", serif;
     font-size: 1.3125rem;
     font-weight: bolder; }
-  .buy-service button {
-    margin-top: 10px;
+  .buy-service__buy-button {
     padding: 10px 60px;
+    margin-top: 10px;
     font-size: 2rem;
     color: #dedede;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
     border-radius: 4px; }
-  .buy-service button:hover {
+  .buy-service__buy-button:hover {
     background-color: #333;
     transition-timing-function: ease;
     transition-duration: 500ms; }
@@ -267,64 +271,67 @@ main {
 .footer {
   background-color: #323232; }
   .footer__above {
-    margin: 0 20%;
+    display: flex;
     padding-top: 20px;
     padding-bottom: 40px;
-    display: flex;
+    margin: 0 20%;
     justify-content: space-around;
-    color: #ffffff; }
+    color: #fff; }
   .footer__phone, .footer__about {
     text-align: center; }
   .footer__below {
-    margin: 0 40px;
     display: flex;
-    justify-content: center;
     padding: 20px;
+    margin: 0 40px;
+    justify-content: center;
     color: #a4a4a4;
-    border-top: 1px solid #ffffff; }
+    border-top: 1px solid #fff; }
 
 .banner {
-  background: transparent url(bg-subpage.jpg) no-repeat scroll;
-  height: 50vh;
-  background-size: cover;
-  background-position: 50% 50%;
-  font-size: 1.5rem;
-  font-family: 'Roboto Slab', serif;
   display: flex;
-  align-items: center;
-  color: #ffffff; }
-  .banner h1 {
+  height: 50vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent url("bg-subpage.jpg") no-repeat scroll;
+  background-position: 50% 50%;
+  background-size: cover;
+  align-items: center; }
+  .banner__heading1 {
     margin-left: 40px; }
     @media (max-width: 500px) {
-      .banner h1 {
+      .banner__heading1 {
         word-break: break-all; } }
 
 .about-fooservice {
   margin: 80px 40px; }
-  .about-fooservice h3 {
-    font-family: 'Roboto Slab', serif; }
-  .about-fooservice p {
+  .about-fooservice__heading3 {
+    font-family: "Roboto Slab", serif; }
+  .about-fooservice :nth-child(2),
+  .about-fooservice :nth-child(3),
+  .about-fooservice :nth-child(5),
+  .about-fooservice :nth-child(6) {
     margin: 20px 0; }
   .about-fooservice :nth-child(5) {
     max-width: 41.2%; }
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       .about-fooservice :nth-child(5) {
         max-width: 100%; } }
-  .about-fooservice blockquote {
-    margin: 40px;
-    max-width: 49%;
+  .about-fooservice .quote {
     float: right;
-    font-style: italic;
-    font-size: 1.5rem; }
+    max-width: 49%;
+    margin: 40px;
+    font-size: 1.5rem;
+    font-style: italic; }
     @media (max-width: 500px) {
-      .about-fooservice blockquote {
-        margin: 20px;
+      .about-fooservice .quote {
         float: none;
-        max-width: 100%; } }
-  .about-fooservice footer {
-    margin-top: 20px;
-    font-style: normal;
-    font-size: 0.875rem; }
+        max-width: 100%;
+        margin: 20px; } }
+  .about-fooservice .quote-footer {
+    margin: 20px 0;
+    font-size: 0.875rem;
+    font-style: normal; }
 
 .information {
   display: flex;
@@ -420,7 +427,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
-  .order-service button {
+  .order-service__order-button {
     padding: 10px 100px;
     margin-top: 10px;
     margin-bottom: 80px;
@@ -430,7 +437,7 @@ main {
     background: #666;
     border: 1px solid #666;
     border-radius: 4px; }
-  .order-service button:hover {
+  .order-service__order__button:hover {
     background-color: #333;
     transition-timing-function: ease;
     transition-duration: 500ms; }

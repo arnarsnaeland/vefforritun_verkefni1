@@ -20,7 +20,7 @@
     font-weight: bolder;
   }
 
-  button {
+  &__buy-button {
     padding: ($gutter / 2) (3 * $gutter);
     margin-top: $gutter / 2;
     font-size: 2rem;
@@ -32,7 +32,7 @@
     border-radius: 4px;
   }
 
-  button:hover {
+  &__buy-button:hover {
     background-color: #333;
 
     transition-timing-function: ease;
