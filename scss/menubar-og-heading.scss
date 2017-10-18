@@ -66,7 +66,8 @@
   margin-bottom: 2 * $gutter;
   flex-direction: column;
   background: transparent url("bg.jpg") no-repeat fixed 50% 50%;
-  background-size: 81%;
+  background-position: fixed;
+  background-size: $max-width;
 
   justify-content: center;
   align-items: center;
