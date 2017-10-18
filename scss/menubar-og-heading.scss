@@ -2,21 +2,18 @@
 
   position: fixed;
   display: flex;
-  width: $max-width;
+  width: 100%;
+  max-width: $max-width;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
 
   @media (max-width: $max-width) {
-    width: 100%;
-  }
-
-  @media (max-width: 500px) {
-    margin-right: $gutter;
+    width: calc(100% - 40px); //$gutter virðist ekki virka inni í calc
   }
 
   &__name {
-    margin: $gutter / 2 $gutter / 2 $gutter / 2 $gutter * 2;
+    margin: $gutter / 2 $gutter / 2 $gutter / 2 $gutter;
     font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -38,7 +35,7 @@
   .menu-button {
     display: flex;
     padding: $gutter / 4 $gutter / 2;
-    margin: $gutter / 2 $gutter * 2 $gutter / 2 $gutter / 2;
+    margin: $gutter / 2 $gutter $gutter / 2 $gutter / 2;
     justify-content: center;
     align-items: center;
 
@@ -47,7 +44,7 @@
     border: 1px solid #666;
     border-radius: 4px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 400px) {
       display: none;
     }
   }
@@ -73,7 +70,7 @@
   margin-bottom: 2 * $gutter;
   flex-direction: column;
   background: transparent url("bg.jpg") no-repeat fixed 50% 50%;
-  background-size: 81%;
+  background-size: $max-width;
 
   justify-content: center;
   align-items: center;
@@ -113,12 +110,13 @@
     }
   }
 
-  &__buy-button {
-    padding: $gutter / 2;
-    margin: $gutter / 2;
-    font-size: 2rem;
-    color: #dedede;
-
+  &__button {
+    display: flex;
+    width: 5 * $gutter;
+    padding: $gutter / 4 $gutter / 2;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
     cursor: pointer;
     background: #666;
     border: 1px solid #666;
@@ -130,13 +128,23 @@
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-delay: 3s;
+
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 
-  &__buy-button:hover {
+  &__button:hover {
+    color: #eee;
     background-color: #333;
 
     transition-timing-function: ease;
     transition-duration: 500ms;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
   }
 
 }
