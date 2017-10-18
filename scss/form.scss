@@ -131,7 +131,7 @@ $gray: #808080;
   align-items: center;
   flex-direction: column;
 
-  button {
+  &__order-button {
     padding: ($gutter / 2) (5 * $gutter);
     margin-top: $gutter / 2;
     margin-bottom: $gutter * 4;
@@ -144,7 +144,7 @@ $gray: #808080;
     border-radius: 4px;
   }
 
-  button:hover {
+  &__order__button:hover {
     background-color: #333;
 
     transition-timing-function: ease;

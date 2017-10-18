@@ -20,7 +20,7 @@
   &__list {
 
     display: flex;
-    max-width: 49.167%;
+    max-width: 47%;
     margin-left: $gutter;
 
     @media (max-width: 700px) {
@@ -28,17 +28,23 @@
       margin-bottom: 3 * $gutter;
     }
 
-    h4 {
+    &__heading4 {
+      padding-left: 1.7rem;
+      padding-right: 0.5rem;
       font-family: "Roboto Slab", serif;
       font-size: 1.125rem;
 
       background-image: url("check.svg");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
       background-size: 1.5rem;
     }
 
-    ul {
+    &__p {
+      padding-left: 1.7rem;
+      padding-right: 0.5rem;
+    }
+
+    &__unordered-list {
       display: flex;
       flex-direction: column;
       justify-content: space-around;

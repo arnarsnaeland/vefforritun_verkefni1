@@ -10,7 +10,7 @@
   background-size: cover;
   align-items: center;
 
-  h1 {
+  &__heading1 {
     margin-left: 2 * $gutter;
 
     @media (max-width: 500px) {
@@ -20,27 +20,29 @@
 }
 
 .about-fooservice {
-
   margin: 4 * $gutter 2 * $gutter;
 
-  h3 {
+  &__heading3 {
     font-family: "Roboto Slab", serif;
   }
 
-  p {
+  :nth-child(2),
+  :nth-child(3),
+  :nth-child(5),
+  :nth-child(6) {
     margin: $gutter 0;
   }
 
   :nth-child(5) {
     max-width: 41.2%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       max-width: 100%;
     }
 
   }
 
-  blockquote {
+  .quote {
     float: right;
     max-width: 49%;
     margin: 2 * $gutter;
@@ -55,8 +57,8 @@
 
   }
 
-  footer {
-    margin-top: $gutter;
+  .quote-footer {
+    margin: $gutter 0;
     font-size: 0.875rem;
     font-style: normal;
 

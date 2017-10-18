@@ -35,7 +35,7 @@
     align-items: center;
   }
 
-  .button {
+  .menu-button {
     display: flex;
     padding: $gutter / 4 $gutter / 2;
     margin: $gutter / 2 $gutter * 2 $gutter / 2 $gutter / 2;
@@ -52,7 +52,7 @@
     }
   }
 
-  .button:hover {
+  .menu-button:hover {
     color: #eee;
     background-color: #333;
 
@@ -60,7 +60,7 @@
     transition-duration: 500ms;
   }
 
-  a {
+  &__link {
     color: #fff;
     text-decoration: none;
   }
@@ -85,35 +85,35 @@
     font-size: 2rem;
     flex-direction: column;
     align-items: center;
+
+    &__heading3 {
+      font-size: 2rem;
+      font-weight: 400;
+      opacity: 0;
+
+      animation-name: texti;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      animation-delay: 1s;
+
+    }
+
+    &__heading1 {
+      margin-bottom: $gutter;
+      font-size: 4rem;
+      opacity: 0;
+
+      animation-name: texti;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      animation-delay: 2s;
+
+    }
   }
 
-  &__text h3 {
-    font-size: 2rem;
-    font-weight: 400;
-    opacity: 0;
-
-    animation-name: texti;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-delay: 1s;
-
-  }
-
-  &__text h1 {
-    margin-bottom: $gutter;
-    font-size: 4rem;
-    opacity: 0;
-
-    animation-name: texti;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-delay: 2s;
-
-  }
-
-  button {
+  &__buy-button {
     padding: $gutter / 2;
     margin: $gutter / 2;
     font-size: 2rem;
@@ -132,7 +132,7 @@
     animation-delay: 3s;
   }
 
-  button:hover {
+  &__buy-button:hover {
     background-color: #333;
 
     transition-timing-function: ease;
