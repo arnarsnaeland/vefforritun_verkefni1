@@ -88,11 +88,14 @@ main {
   background-size: 1200px;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 450px) {
+    .heading {
+      height: 60vh;
+      background-position: -2% 0%; } }
   .heading__text {
     display: flex;
     margin-bottom: 20px;
     font-family: "Roboto Slab", serif;
-    font-size: 2rem;
     flex-direction: column;
     align-items: center; }
     .heading__text__heading3 {
@@ -104,15 +107,21 @@ main {
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
       animation-delay: 1s; }
+      @media (max-width: 450px) {
+        .heading__text__heading3 {
+          font-size: 1.5rem; } }
     .heading__text__heading1 {
       margin-bottom: 20px;
-      font-size: 4rem;
+      font-size: 3.75rem;
       opacity: 0;
       animation-name: texti;
       animation-duration: 1s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
       animation-delay: 2s; }
+      @media (max-width: 450px) {
+        .heading__text__heading1 {
+          font-size: 3rem; } }
   .heading__button {
     display: flex;
     width: 100px;
@@ -130,9 +139,6 @@ main {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-delay: 3s; }
-    @media (max-width: 400px) {
-      .heading__button {
-        display: none; } }
   .heading__button:hover {
     color: #eee;
     background-color: #333;
@@ -246,9 +252,9 @@ main {
     text-align: center; }
 
 .buy-service {
+  justify-content: center;
   display: flex;
   margin: 160px 40px 100px 40px;
-  justify-content: center;
   align-items: center;
   flex-direction: column; }
   @media (max-width: 700px) {
@@ -377,7 +383,6 @@ main {
 .form__radioButton {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   top: 4px;
   width: 16px;
   height: 16px;
@@ -417,7 +422,6 @@ main {
 .form__checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   width: 10px;
   height: 10px;
   margin-right: 5px;
